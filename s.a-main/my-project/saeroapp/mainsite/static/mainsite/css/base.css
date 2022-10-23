@@ -1,0 +1,49 @@
+ .slh{
+   font-size: 50px;
+   font-weight: 500;
+   background-image: linear-gradient(to left, #000000, #A4EBF3);
+   /* background-image: linear-gradient(to right, #A4EBF3, #AAAAAA); */
+   color: transparent;
+   background-clip: text;
+   -webkit-background-clip: text; }
+
+
+   .slh4{
+    font-size: 25px;
+    font-weight: 500;
+    background-image: linear-gradient(to left, #000000, #A4EBF3);
+    /* background-image: linear-gradient(to right, #A4EBF3, #AAAAAA); */
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text; }
+
+
+   .slp{
+    font-size: 20px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #000000, #A4EBF3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text; }
+
+   
+  
+  .generic{
+      padding: 50px;
+  }
+
+  #lg1{
+    width: 30px;
+    height: 30px;
+    
+  }
+ 
+  #mimage{
+    width: 450px;
+    height: 450px;
+
+  }
+
+#imgmargin{
+  padding-left: 80px;
+}

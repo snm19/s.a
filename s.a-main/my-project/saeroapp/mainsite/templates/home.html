@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SaeroTech</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{% static 'mainsite/img/logo2.ico'%}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'mainsite/img/logo2.ico' %}">
+    <link rel="stylesheet" href="{% static 'mainsite/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'mainsite/css/templatemo2.css' %}">
+    <link rel="stylesheet" href="{% static 'mainsite/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'mainsite/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'mainsite/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mainsite/css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'mainsite/css/gallery.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="{% static 'mainsite/css/fontawesome.min.css' %}">
+    
+
+</head>
+
+<body>
+    <!-- Start Top Nav -->
+    {% include 'mainsite/partials/_topnav.html' %}
+
+    <!-- Close Top Nav -->
+
+
+    <!-- Header -->
+   {% include 'mainsite/partials/_navbar.html' %}
+    <!-- Close Header -->
+      
+
+    <!-- Modal -->
+    <div class="modal fade" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Start Banner Hero -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            {% for object in obj%}
+            <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}">
+                <img src="{{object.image.url}}" style="height:650px;" class="testi-overly d-block w-100" alt="sliderImg">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="animate__animated
+                    {% if forloop.counter0 == 0 %}
+                    animate__fadeInDown
+                    {% endif %}
+                    {% if forloop.revcounter == 1 %}
+                    animate__bounce
+                    {% endif %}
+                    {% if forloop.revcounter == 2 %}
+                    animate__fadeInRight
+                    {% endif %}">{{object.title}}</h1>
+                    <p class="animate__animated animate__zoomIn">{{object.describtion}}</p>
+                    <a href="{{object.link}}" class="button animate__animated animate__zoomIn mt-3 py-3 px-5 btn font-weight-bold">{{object.action_name}}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+          <!-- End Banner Hero -->
+
+
+    <!-- sanem section -->
+    <section id="about" class="item">
+      <div class="container20">
+        <div class="row">
+    
+          <div class="col-md-9 col-sm-8 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-thumb">
+              <h1>Space Aero Technology</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis culpa, debitis quo beatae aliquam suscipit! Porro, dignissimos et ipsum ratione quam commodi, tenetur dolorem temporibus blanditiis saepe error quis rem!</p>
+            </div>
+          </div>
+    
+          <div class="col-md-3 col-sm-4 wow fadeInUp about-img" data-wow-delay="0.6s">
+            <img src="{% static 'mainsite/img/e.jpg' %}" class="img-responsive img-circle" alt="About">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- End sanem section -->
+
+    <div class="container19">
+      <div class="card19">
+        <div class="imgbx">
+          <img src="{% static 'mainsite/img/x.jpg' %}" alt="">
+        </div>
+        <div class="contentbx">
+          <div class="content">
+            <h3>post one</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, optio?</p>
+ 
+          </div>
+ 
+        </div>
+      </div>
+      <div class="card19">
+       <div class="imgbx">
+         <img src="{% static 'mainsite/img/y.jpg' %}" alt="">
+       </div>
+       <div class="contentbx">
+         <div class="content">
+           <h3>post one</h3>
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, provident?</p>
+           
+         </div>
+ 
+       </div>
+     </div><div class="card19">
+       <div class="imgbx">
+         <img src="{% static 'mainsite/img/z.jpg' %}" alt="">
+       </div>
+       <div class="contentbx">
+         <div class="content">
+           <h3>post one</h3>
+           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, doloribus?</p>
+           
+         </div>
+ 
+       </div>
+     </div><div class="card19">
+       <div class="imgbx">
+         <img src="{% static 'mainsite/img/15.jpg' %}" alt="">
+       </div>
+       <div class="contentbx">
+         <div class="content">
+           <h3>post one</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, omnis!</p>
+           
+         </div>
+ 
+       </div>
+     </div>
+    </div>
+    
+
+    <!-- Start Featured Product -->
+    <section class="bg-light">
+        <div class="container py-5">
+            <div class="row text-center py-3">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="h1">Thanks to Our Sponsors...</h1>
+                    <p>
+                        Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                {% for sponsor in sponsors %}
+             {% include 'mainsite/partials/_sponsors.html' %}
+                {% endfor %}
+        </div>
+    </section>
+    <!-- End Featured Product -->
+
+
+    <!-- Start Footer -->
+    {% include 'mainsite/partials/_footer.html' %}
+    <!-- End Footer -->
+
+   
+    <!-- Start Script -->
+    <script src="{% static 'mainsite/js/jquery-1.11.0.min.js' %}"></script>
+    <script src="{% static 'mainsite/js/jquery-migrate-1.2.1.min.js' %}"></script>
+    <script src="{% static 'mainsite/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'mainsite/js/templatemo.js'%}"></script>
+    <script src="{% static 'mainsite/js/custom.js'%}"></script>
+    <!-- End Script -->
+</body>
+
+</html>
